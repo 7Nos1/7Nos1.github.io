@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let granny = document.createElement("img");
+    granny.src = 'granny-babushka.gif';
+    document.body.append(granny);
+
+    let left = 100;
+    let step = 5;
+
+     granny.style.position = 'fixed';
+     granny.style.position = '100px';
+     granny.style.position = left + 'px';
+
+     function moveGranny(){
+        left = left + step;
+
+         if (left > 900){
+            step = step *(-1);
+             granny.style.transform = 'rotateY(180deg)';
+         }
+        granny.style.left = left + 'px';
+     }
+     setInterval(moveGranny,100);
+    </script>
+</body>
+</html>
